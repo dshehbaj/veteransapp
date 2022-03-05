@@ -5,14 +5,20 @@ import MyComponent from './components/Button';
 import MyBanner from './components/Banner';
 import { Image } from 'react-native-paper/lib/typescript/components/Avatar/Avatar';
 import MyAvatar from './components/Avatar';
-export default function App() {
+export default function AboutUs() {
   return (
     
     <View>
       
       <MyBanner/>
-      <Text style={styles.bg}>Google Maps Page</Text>
-      
+      <Text style={styles.bg}>Our Mission</Text>
+      <Text style={styles.bg}>Our Team</Text>
+      <Text style={styles.bg}>Shehbaj Dhillon</Text>
+      <MyAvatar/>
+      <Text style={styles.bg}>Jack Nelson</Text>
+      <MyAvatar/>
+      <Text style={styles.bg}>Michael Cassetti</Text>
+      <MyAvatar/>
   
       <StatusBar style="auto" />
     </View>
