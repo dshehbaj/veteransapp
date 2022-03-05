@@ -16,17 +16,14 @@ export default class CognitoUserPool extends Construct implements CognitoUserPoo
   constructor(scope: Construct, id: string, props: StackProps) {
     super(scope, id);
 
-    const userPool = new UserPool(
-      this,
-      `${props.stackName}-${id}`,
-      {
-      userPoolName: `${props.stackName}-${id}`,
+    this.userPool = new UserPool(this, `${id}-${props.stackName}`, {
+      userPoolName: `${id}-${props.stackName}`,
       selfSignUpEnabled: true,
       signInAliases: {
         email: true,
       },
       autoVerify: {
-        email: true,
+        email: false,
       },
       passwordPolicy: {
         minLength: 6,
@@ -37,14 +34,13 @@ export default class CognitoUserPool extends Construct implements CognitoUserPoo
       },
       accountRecovery: AccountRecovery.EMAIL_ONLY,
       removalPolicy: RemovalPolicy.DESTROY,
-      }
-    );
+    });
 
-    const userPoolClient = new UserPoolClient(
+    this.userPoolClient = new UserPoolClient(
       this,
-      `${props.stackName}-${id}-client`,
+      `${id}-user-pool-client-${props.stackName}`,
       {
-      userPool,
+      userPool: this.userPool,
       authFlows: {
         adminUserPassword: true,
         custom: true,
@@ -54,6 +50,7 @@ export default class CognitoUserPool extends Construct implements CognitoUserPoo
         UserPoolClientIdentityProvider.COGNITO,
       ],
     });
+
   }
 }
 
