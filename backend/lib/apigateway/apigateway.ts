@@ -3,7 +3,7 @@ import {
   CfnAuthorizer,
   AuthorizationType
 } from 'aws-cdk-lib/aws-apigateway';
-import { App, StackProps, CfnOutput } from 'aws-cdk-lib';
+import { StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { APIGatewayProps } from '../common/types';
 import CognitoUserPool from '../cognito/cognito-user-pool';

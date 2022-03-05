@@ -7,7 +7,7 @@ const app = new cdk.App();
 const stackNames = ['dev', 'prod'];
 
 stackNames.forEach((stackName) => {
-  new BackendStack(app, `veterans-app-${stackName}`, {
+  new BackendStack(app, `vet-app-${stackName}`, {
     stackName: stackName,
   })
 });

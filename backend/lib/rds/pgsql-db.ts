@@ -40,7 +40,7 @@ export default class CdkStarterStack extends Construct {
         subnetType: SubnetType.PUBLIC,
       },
       engine: rds.DatabaseInstanceEngine.postgres({
-        version: rds.PostgresEngineVersion.VER_13_1,
+        version: rds.PostgresEngineVersion.VER_13,
       }),
       instanceType: InstanceType.of(
         InstanceClass.BURSTABLE3,

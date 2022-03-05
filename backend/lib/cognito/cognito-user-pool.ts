@@ -6,8 +6,13 @@ import {
 } from 'aws-cdk-lib/aws-cognito';
 import { StackProps, RemovalPolicy } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { CognitoUserPoolProps } from '../common/types';
 
-export default class CognitoUserPool extends Construct {
+export default class CognitoUserPool extends Construct implements CognitoUserPoolProps {
+
+  userPool: UserPool;
+  userPoolClient: UserPoolClient;
+
   constructor(scope: Construct, id: string, props: StackProps) {
     super(scope, id);
 
