@@ -8,10 +8,11 @@ import MyAvatar from './components/Avatar';
 import MySD from './components/SD';
 import MyMC from './components/MC';
 import MyJN from './components/JN';
+import { ScrollView } from 'react-native-gesture-handler';
 export default function AboutUs() {
   return (
     
-    <View style={styles.bg}>
+    <ScrollView style={styles.bg}>
       <Text>{' '}</Text>
       <Text style={styles.profiletxt}>Our Mission</Text>
       <Text style={styles.profiledesc}>Our mission is to connect volunteers in our local community to veterans in need of help. From helping around the house like mowing lawns and moving to navigate the complex VA processes, NAMELIX will pair veterans with volunteers who are specialized to help in that area. 
@@ -22,19 +23,25 @@ export default function AboutUs() {
       <Text>{' '}</Text>
       <Text style={styles.profiletxt}>Shehbaj Dhillon</Text>
       <MySD/>
+      <Text style={styles.profiledesc}>3rd Year Computer Science Major (Builder)</Text>
+        <Text>{' '}</Text>
       <Text style={styles.profiletxt}>Jack Nelson</Text>
       <MyJN/>
+      <Text style={styles.profiledesc}>3rd Year Computer Science Major (Designer)</Text>
+        <Text>{' '}</Text>
       <Text style={styles.profiletxt}>Michael Cassetti</Text>
+        <Text>{' '}</Text>
       <MyMC/>
+      <Text style={styles.profiledesc}>3rd Year Indurstial Engineering Major (Advocater)</Text>
   
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
     bg: {
-      
+      textAlign: 'center',
       backgroundColor:'lightgrey'
   
     }
@@ -46,6 +53,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     profiletxt: {
+      flex: 1,
       fontSize: 30,
       textAlign: 'center',
       alignItems: 'center',
@@ -58,6 +66,6 @@ const styles = StyleSheet.create({
     },
     profiledesc: {
       fontSize: 16,
-      right: -12
+      textAlign: 'center'
     }
   });
