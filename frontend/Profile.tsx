@@ -6,10 +6,11 @@ import MyBanner from './components/Banner';
 import { Image } from 'react-native-paper/lib/typescript/components/Avatar/Avatar';
 import MyAvatar from './components/Avatar';
 import MyMC from './components/MC';
+import { ScrollView } from 'react-native-gesture-handler';
 export default function Profile() {
   return (
     
-    <View style={styles.bg}>
+    <ScrollView style={styles.bg}>
       <Text>{' '}</Text>
       <MyMC/>
       <View
@@ -20,24 +21,78 @@ export default function Profile() {
     backgroundColor: 'white'
     
   }}>
-      <Text style={styles.profiletxt}>Michael Cassetti</Text> 
+      <Text style={styles.profiletxt}>Michael Cassetti, 20</Text> 
       </View>
       <Text style={styles.profilebio}>Affiliation: Sales Engineering Club</Text>
       <Text style={styles.profilebio}>Location: SLO</Text>
       <Text style={styles.profilebio}>Hours Served: 22</Text>
       <Text>{' '}</Text>
+      <Text style={styles.profilebio}>Bio</Text>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 5,
+    backgroundColor: 'white'
+    
+  }}> 
+  
       <Text style={styles.profiledesc}>Hi my name is Michael and I am a 3rd year IME major. 
       Feel free to reach out to me with any tasks you have! I enjoy fishing, surfing, and also play hockey in my free time.
       </Text>
+      </View>
       <Text>{' '}</Text>
-      <Text style={styles.profilebio}>Reviews (2)</Text>
+      <Text style={styles.profilebio}>Skills (4)</Text>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 5,
+    backgroundColor: 'white'
+    
+  }}> 
+  
+      <Text style={styles.profiledesc}>Moving, Hauling, Fishing, Dog Walking
+      </Text>
+      </View>
       <Text>{' '}</Text>
+      <Text style={styles.profilebio}>Reviews (3)</Text>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 5,
+    backgroundColor: 'white'
+    
+  }}>
       <Text style={styles.profiledesc}>Robert: Michael was an excellent volunteer. 
       He walked my dog for 2 weeks and was always on time.
       Would highly recommend!</Text>
+      </View>
       <Text>{' '}</Text>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 5,
+    backgroundColor: 'white'
+    
+  }}>
+      <Text style={styles.profiledesc}>Jenny: Michael was an excellent volunteer! He assisted me in moving all my boxes to my new house!
+      Would highly recommend!</Text>
+      </View>
+      <Text>{' '}</Text>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 5,
+    backgroundColor: 'white'
+    
+  }}>
       <Text style={styles.profiledesc}>Jessica: Michael mowed my lawn a couple times and was very excited I joined the platform. 
       Five stars for Michael!</Text>
+      </View>
       <Text>{' '}</Text>
       <Text>{' '}</Text>
       <Text>{' '}</Text>
@@ -45,7 +100,7 @@ export default function Profile() {
       <Text>{' '}</Text>
       <Text>{' '}</Text>
       <Text>{' '}</Text>
-    </View>
+    </ScrollView>
   );
 }
 

@@ -16,9 +16,9 @@ const Stack = createStackNavigator();
 export default function Leader() {
   return (
     <ScrollView style={styles.viewbg}>
-    <Text>{' '}</Text>
+    
     <Image style={styles.imgsize} source={require('../frontend/images/award.png')} />
-    <Text>{' '}</Text>
+    
     <Image style={styles.imgsize} source={require('../frontend/images/award2.png')} />
     </ScrollView>
     
