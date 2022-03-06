@@ -12,7 +12,16 @@ export default function Profile() {
     <View style={styles.bg}>
       <Text>{' '}</Text>
       <MyMC/>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 50,
+    backgroundColor: 'white'
+    
+  }}>
       <Text style={styles.profiletxt}>Michael Cassetti</Text> 
+      </View>
       <Text style={styles.profilebio}>Affiliation: Sales Engineering Club</Text>
       <Text style={styles.profilebio}>Location: SLO</Text>
       <Text style={styles.profilebio}>Hours Served: 22</Text>
