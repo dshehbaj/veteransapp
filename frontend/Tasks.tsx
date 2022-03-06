@@ -7,11 +7,47 @@ import { Image } from 'react-native-paper/lib/typescript/components/Avatar/Avata
 import MyAvatar from './components/Avatar';
 import MyMC from './components/MC';
 import { ScrollView } from 'react-native-gesture-handler';
+import { Card } from 'react-native-paper';
+import { Title } from 'react-native-paper';
+import React from 'react';
+
 export default function Tasks() {
   return (
     
-    <ScrollView>
-        <Text>Heyo</Text>
+    <ScrollView style={{backgroundColor: 'lightgrey'}}>
+        <View
+            style={{
+                borderWidth: 1,
+                borderColor: "black",
+                borderRadius: 50,
+                backgroundColor: 'white'
+                
+            }}>
+      <Text style={styles.profiletxt}>Featured Tasks</Text> 
+      <Text>{' '}</Text>
+      </View>
+      <Card>
+    <Card.Content>
+      <Title>Task 1</Title>
+    </Card.Content>
+    <Text>{' '}</Text>
+    <Card.Content>
+      <Title>Task 2</Title>
+    </Card.Content>
+    <Text>{' '}</Text>
+    <Card.Content>
+      <Title>Task 3</Title>
+    </Card.Content>
+    <Text>{' '}</Text>
+    <Card.Content>
+      <Title>Task 4</Title>
+    </Card.Content>
+    <Text>{' '}</Text>
+    <Card.Content>
+      <Title>Task 5</Title>
+    </Card.Content>
+    <Text>{' '}</Text>
+    </Card>
     </ScrollView>
   );
 }
