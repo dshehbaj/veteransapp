@@ -10,7 +10,7 @@ const MyBanner = () => {
   return (
     <Appbar.Header style={styles.BannerStyle}>
       <Appbar.BackAction onPress={_goBack} />
-      <Appbar.Content title="SLOService" subtitle="About Us" style={styles.BannerStyle}/>
+      <Appbar.Content title="SLOService" style={styles.BannerStyle}/>
      
     </Appbar.Header>
   );
