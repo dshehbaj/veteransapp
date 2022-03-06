@@ -27,17 +27,18 @@ export default function Tasks() {
 
   return (
 
-    <ScrollView style={{backgroundColor: 'lightgrey'}}>
+    <ScrollView style={{backgroundColor: '#253470'}}>
         <View
             style={{
                 borderWidth: 1,
                 borderColor: "black",
-                borderRadius: 50,
-                backgroundColor: 'white'
+                borderRadius: 1,
+                backgroundColor: 'lightgrey'
 
             }}>
+           
       <Text style={styles.profiletxt}>Featured Tasks</Text>
-      <Text>{' '}</Text>
+     
       </View>
       {tasks.map((t) => {
           return <TaskCard {...t}/>
