@@ -11,10 +11,9 @@ import { Item } from 'react-native-paper/lib/typescript/components/List/List';
 const Stack = createStackNavigator();
 
 
-export default function App() {
+export default function Leader() {
   return (
     <View>
-    <MyBanner/>
     <Text>{' '}</Text>
     <Text style={styles.profiletxt}>Group</Text> 
     <Text>{' '}</Text>

@@ -10,7 +10,6 @@ export default function Profile() {
   return (
     
     <View style={styles.bg}>
-      <MyBanner/>
       <Text>{' '}</Text>
       <MyMC/>
       <Text style={styles.profiletxt}>Michael Cassetti</Text> 
