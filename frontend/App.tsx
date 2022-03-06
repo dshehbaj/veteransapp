@@ -9,6 +9,8 @@ import AboutUs from './AboutUs';
 import Tasks from './Tasks';
 import { Card } from 'react-native-paper';
 import { Image } from 'react-native';
+import getListings from '../frontend/utils/getListings';
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -21,11 +23,11 @@ export default function App() {
           title: '                     VETERING',
           headerStyle: {
             backgroundColor: '#253470',
-       
+
           },
           headerTintColor: 'lightgrey',
           headerTitleStyle: {
-            
+
             fontWeight: 'bold',
             fontSize: 25
           },
@@ -34,8 +36,8 @@ export default function App() {
         <Stack.Screen name="Leaderboard" component={Leader} />
         <Stack.Screen name="Our Team" component={AboutUs} />
         <Stack.Screen name="Tasks Board" component={Tasks} />
-       
-        
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -46,7 +48,7 @@ const DummyScreen1 = () => {
     <View style={styles.container}>
       <Text>This is is is where the logo will go</Text>
       <StatusBar style="auto" />
-      
+
     </View>
   );
 };
@@ -56,14 +58,14 @@ const DummyScreen1 = () => {
 const DummyScreen2 = ({ navigation }) => {
   return (
 
-  
+
     <View style={styles.container}>
 
 
 <Image style={styles.imgsize} source={require('../frontend/images/vetering.png')} />
 
 
-      
+
 <Text>{' '}</Text>
       <View style={{ flexDirection:"row" }}>
     <View>
@@ -71,13 +73,15 @@ const DummyScreen2 = ({ navigation }) => {
         onPress={() => navigation.navigate('Profile')}
       >
       <Text style={styles.colors}>My Profile </Text>
-   
+
       </Button >
     </View>
     <View><Text>     </Text></View>
     <View>
     <Button style={styles.buttongrey}
-        onPress={() => navigation.navigate('Leaderboard')}
+        onPress={() => {
+            navigation.navigate('Leaderboard');
+          }}
       >
       <Text style={styles.colors}>Leaderboard</Text>
       </Button>
@@ -95,19 +99,21 @@ const DummyScreen2 = ({ navigation }) => {
     <View><Text>     </Text></View>
     <View>
     <Button style={styles.buttongrey}
-        onPress={() => navigation.navigate('Tasks Board')}
+        onPress={async () => {
+          navigation.navigate('Tasks Board');
+          }}
       >
       <Text style={styles.colors}>Tasks Board</Text>
       </Button>
     </View>
     </View>
-      
-      
-      
-      
-      
-    
-      
+
+
+
+
+
+
+
     </View>
   );
 };
@@ -121,7 +127,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   buttongrey: {
-  
+
     alignItems: 'center',
     width: 200,
     borderRadius: 5,
@@ -130,8 +136,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     elevation: 5,
     backgroundColor: '#253470'
-    
-    
+
+
   },
   imgsize: {
     width: 190,
@@ -143,7 +149,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white'
-    
+
   }
 });
 
