@@ -9,11 +9,24 @@ import MyMC from './components/MC';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Card } from 'react-native-paper';
 import { Title } from 'react-native-paper';
-import React from 'react';
+import TaskCard from './components/TaskComponent';
+import React, { useState, useEffect } from 'react';
+import getListings from './utils/getListings';
 
 export default function Tasks() {
+
+  const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    const getL = async () => {
+      const listings = await getListings();
+      setTasks(listings.Items);
+    }
+    getL();
+  });
+
   return (
-    
+
     <ScrollView style={{backgroundColor: 'lightgrey'}}>
         <View
             style={{
@@ -21,31 +34,15 @@ export default function Tasks() {
                 borderColor: "black",
                 borderRadius: 50,
                 backgroundColor: 'white'
-                
+
             }}>
-      <Text style={styles.profiletxt}>Featured Tasks</Text> 
+      <Text style={styles.profiletxt}>Featured Tasks</Text>
       <Text>{' '}</Text>
       </View>
+      {tasks.map((t) => {
+          return <TaskCard {...t}/>
+        })}
       <Card>
-    <Card.Content>
-      <Title>Task 1</Title>
-    </Card.Content>
-    <Text>{' '}</Text>
-    <Card.Content>
-      <Title>Task 2</Title>
-    </Card.Content>
-    <Text>{' '}</Text>
-    <Card.Content>
-      <Title>Task 3</Title>
-    </Card.Content>
-    <Text>{' '}</Text>
-    <Card.Content>
-      <Title>Task 4</Title>
-    </Card.Content>
-    <Text>{' '}</Text>
-    <Card.Content>
-      <Title>Task 5</Title>
-    </Card.Content>
     <Text>{' '}</Text>
     </Card>
     </ScrollView>
@@ -56,9 +53,9 @@ export default function Tasks() {
 
 const styles = StyleSheet.create({
     bg: {
-      
+
       backgroundColor: 'lightgrey'
-      
+
     },
     container: {
       flex: 1,
@@ -82,4 +79,4 @@ const styles = StyleSheet.create({
       right: -12
     }
   });
-  
+
