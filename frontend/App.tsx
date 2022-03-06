@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   colors: {
     color: 'black',
     fontSize: 30,
-    fontFamily: 'San Francisco'
+    
   }
 });
 
