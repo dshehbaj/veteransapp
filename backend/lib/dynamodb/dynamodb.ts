@@ -1,14 +1,15 @@
-import { StackProps, RemovalPolicy } from 'aws-cdk-lib';
+import { StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Table, AttributeType } from 'aws-cdk-lib/aws-dynamodb';
+import { DynamoDBProps } from '../common/types';
 
-export default class DynamoDB extends Construct {
+export default class DynamoDB extends Construct implements DynamoDBProps {
 
+  table: Table;
 
   constructor(scope: Construct, id: string, props: StackProps) {
     super(scope, id);
-
-    new Table(this, `${id}-table-${props.stackName}`, {
+    this.table = new Table(this, `${id}-table-${props.stackName}`, {
       partitionKey: {
         name: "listing_id",
         type: AttributeType.STRING,
@@ -18,7 +19,6 @@ export default class DynamoDB extends Construct {
         type: AttributeType.STRING,
       }
     });
-
   }
 }
 
