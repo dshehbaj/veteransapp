@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Profile from './Profile';
-import { Button } from 'react-native-paper';
+import { Button, withTheme } from 'react-native-paper';
 import Leader from './Leaderboard';
 import AboutUs from './AboutUs';
 
@@ -29,7 +29,7 @@ export default function App() {
 const DummyScreen1 = () => {
   return (
     <View style={styles.container}>
-      <Text>This is Dummy Screen 1</Text>
+      <Text>This is where the logo will go</Text>
       <StatusBar style="auto" />
       
     </View>
@@ -41,25 +41,36 @@ const DummyScreen1 = () => {
 const DummyScreen2 = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>This is Dummy Screen 2</Text>
-      <Button
-  
+      <Text>This is where logo will go</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Text>{' '}</Text>
+      <Button style={styles.buttongrey}
         onPress={() => navigation.navigate('Profile')}
       >
-      Profile
+      <Text style={styles.colors}>Profile</Text>
+   
       </Button>
       <Button
-  
         onPress={() => navigation.navigate('Leader')}
       >
-      Leaderboard
+      <Text style={styles.colors}>Leaderboard</Text>
       </Button>
       <Button
-  
         onPress={() => navigation.navigate('AboutUs')}
       >
-      Our Team
+      <Text style={styles.colors}>About Us</Text>
       </Button>
+
+    
+      
     </View>
   );
 };
@@ -68,9 +79,19 @@ const DummyScreen2 = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'lightgrey',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
+  buttongrey: {
+    width: 400,
+    color: 'green'
+    
+  },
+  colors: {
+    color: 'black',
+    fontSize: 30,
+    fontFamily: 'San Francisco'
+  }
 });
 

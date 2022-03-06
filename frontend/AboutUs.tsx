@@ -12,8 +12,6 @@ export default function AboutUs() {
   return (
     
     <View style={styles.bg}>
-      
-      <MyBanner/>
       <Text>{' '}</Text>
       <Text style={styles.profiletxt}>Our Mission</Text>
       <Text style={styles.profiledesc}>Our mission is to connect volunteers in our local community to veterans in need of help. From helping around the house like mowing lawns and moving to navigate the complex VA processes, NAMELIX will pair veterans with volunteers who are specialized to help in that area. 
