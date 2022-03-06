@@ -12,6 +12,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Dummy2">
         <Stack.Screen name="Dummy1" component={DummyScreen1} />
         <Stack.Screen name="Dummy2" component={DummyScreen2} />
+    
       </Stack.Navigator>
     </NavigationContainer>
   );
