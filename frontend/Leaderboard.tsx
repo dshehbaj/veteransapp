@@ -7,38 +7,20 @@ import MyBanner from './components/Banner';
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Item } from 'react-native-paper/lib/typescript/components/List/List';
+import { Image } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
 
 
 export default function Leader() {
   return (
-    <View>
+    <ScrollView style={styles.viewbg}>
     <Text>{' '}</Text>
-    <Text style={styles.profiletxt}>Group</Text> 
+    <Image style={styles.imgsize} source={require('../frontend/images/award.png')} />
     <Text>{' '}</Text>
-    <Text style={styles.profiledesc}>$2500 Scholarship for the leading organziation!
-      </Text>
-    <Text style={styles.profilebio}>Organization                Hours</Text>
-    <Text>{' '}</Text>
-    <Text style={styles.profilebio}>Cal Poly Dance Team       60</Text>
-    <Text style={styles.profilebio}>Theta Chi Fraternity         54</Text>
-    <Text style={styles.profilebio}>Sales Engineering Club   49</Text>
-    <Text style={styles.profilebio}>Engineering Society         34</Text>
-    <Text style={styles.profilebio}>Cal Poly Wrestling            21</Text>
-    <Text>{' '}</Text>
-    <Text style={styles.profiletxt}>Individual</Text> 
-    <Text>{' '}</Text>
-    <Text style={styles.profiledesc}>$500 Amazon gift card for the leading individual!
-      </Text>
-    <Text style={styles.profilebio}>Name                           Hours</Text>
-    <Text>{' '}</Text>
-    <Text style={styles.profilebio}>Michael Cassetti          22</Text>
-    <Text style={styles.profilebio}>Jack Nelson                  18</Text>
-    <Text style={styles.profilebio}>Izzy Razmi                    14</Text>
-    <Text style={styles.profilebio}>Clint Staley                   13</Text>
-    <Text style={styles.profilebio}>Shehbaj Dhillon            11</Text>
-    </View>
+    <Image style={styles.imgsize} source={require('../frontend/images/award2.png')} />
+    </ScrollView>
     
   );
 }
@@ -68,8 +50,15 @@ const styles = StyleSheet.create({
     right: -50,
     fontWeight: 'bold'
   },
+  imgsize: {
+    width: 410,
+    height: 310
+  },
   profiledesc: {
     fontSize: 16,
     right: -12
+  },
+  viewbg: {
+    backgroundColor: 'darkgrey'
   }
 });
