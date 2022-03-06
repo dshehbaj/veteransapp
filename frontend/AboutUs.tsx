@@ -14,23 +14,43 @@ export default function AboutUs() {
     
     <ScrollView style={styles.bg}>
       <Text>{' '}</Text>
-      <Text style={styles.profiletxt}>Our Mission</Text>
-      <Text style={styles.profiledesc}>Our mission is to connect volunteers in our local community to veterans in need of help. From helping around the house like mowing lawns and moving to navigate the complex VA processes, NAMELIX will pair veterans with volunteers who are specialized to help in that area. 
-        NAMELIX gives volunteers a platform to make an impactful difference for SLO Veterans and fulfilled service hours along the way.</Text>
-        <Text>{' '}</Text>
-      <Text style={styles.profiletxt}>Our Team</Text>
-      <Text style={styles.profiledesc}>We are a group of Cal Poly Student Computer Science students and are excited to participate in Camp Polyhacks 2022!</Text>
-      <Text>{' '}</Text>
+      <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 50,
+    backgroundColor: 'white'
+    
+  }}>
       <Text style={styles.profiletxt}>Shehbaj Dhillon</Text>
+      </View>
       <MySD/>
       <Text style={styles.profiledesc}>3rd Year Computer Science Major (Builder)</Text>
         <Text>{' '}</Text>
+        <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 50,
+    backgroundColor: 'white'
+    
+  }}>
       <Text style={styles.profiletxt}>Jack Nelson</Text>
+      </View>
       <MyJN/>
       <Text style={styles.profiledesc}>3rd Year Computer Science Major (Designer)</Text>
         <Text>{' '}</Text>
+
+        <View
+  style={{
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 50,
+    backgroundColor: 'white'
+    
+  }}>
       <Text style={styles.profiletxt}>Michael Cassetti</Text>
-        <Text>{' '}</Text>
+      </View>
       <MyMC/>
       <Text style={styles.profiledesc}>3rd Year Indurstial Engineering Major (Advocater)</Text>
   
@@ -42,7 +62,7 @@ export default function AboutUs() {
 const styles = StyleSheet.create({
     bg: {
       textAlign: 'center',
-      backgroundColor:'lightgrey'
+      backgroundColor:'darkgrey'
   
     }
     ,
@@ -58,6 +78,10 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       alignItems: 'center',
       justifyContent: 'center',
+      fontWeight: 'bold'
+      
+      
+      
     },
     profilebio: {
       fontSize: 20,

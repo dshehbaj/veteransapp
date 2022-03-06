@@ -31,7 +31,7 @@ export default function App() {
         }}
 />
         <Stack.Screen name="Leaderboard" component={Leader} />
-        <Stack.Screen name="About Us" component={AboutUs} />
+        <Stack.Screen name="Our Team" component={AboutUs} />
         
        
         
@@ -86,15 +86,15 @@ const DummyScreen2 = ({ navigation }) => {
     <View style={{ flexDirection:"row" }}>
     <View>
     <Button style={styles.buttongrey}
-        onPress={() => navigation.navigate('About Us')}
+        onPress={() => navigation.navigate('Our Team')}
       >
-      <Text style={styles.colors}>Our Mission</Text>
+      <Text style={styles.colors}>Our Team</Text>
       </Button>
     </View>
     <View><Text>     </Text></View>
     <View>
     <Button style={styles.buttongrey}
-        onPress={() => navigation.navigate('About Us')}
+        onPress={() => navigation.navigate('Our Team')}
       >
       <Text style={styles.colors}>Tasks Board</Text>
       </Button>
