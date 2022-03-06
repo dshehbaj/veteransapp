@@ -6,6 +6,7 @@ import Profile from './Profile';
 import { Button, withTheme } from 'react-native-paper';
 import Leader from './Leaderboard';
 import AboutUs from './AboutUs';
+import Tasks from './Tasks';
 import { Card } from 'react-native-paper';
 import { Image } from 'react-native';
 const Stack = createStackNavigator();
@@ -32,7 +33,7 @@ export default function App() {
 />
         <Stack.Screen name="Leaderboard" component={Leader} />
         <Stack.Screen name="Our Team" component={AboutUs} />
-        
+        <Stack.Screen name="Tasks Board" component={Tasks} />
        
         
       </Stack.Navigator>
@@ -94,7 +95,7 @@ const DummyScreen2 = ({ navigation }) => {
     <View><Text>     </Text></View>
     <View>
     <Button style={styles.buttongrey}
-        onPress={() => navigation.navigate('Our Team')}
+        onPress={() => navigation.navigate('Tasks Board')}
       >
       <Text style={styles.colors}>Tasks Board</Text>
       </Button>
