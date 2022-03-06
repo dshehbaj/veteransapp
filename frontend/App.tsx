@@ -1,34 +1,27 @@
 
 import { StyleSheet, Text, View } from 'react-native';
-
+import Profile from './Profile';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import MyBanner from './components/Banner';
 import React from 'react';
-
+import { Grid } from '@material-ui/core';
+import { Item } from 'react-native-paper/lib/typescript/components/List/List';
+import Leader from './Leaderboard';
+import AboutUs from './AboutUs';
 
 const Stack = createStackNavigator();
 
-const Dummy = () => {
-  return (
-    <View>
-
-    </View>
-
-  )
-}
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <View>
-      <Stack.Navigator initialRouteName="AboutUs">
-        <Stack.Screen name="AboutUs" component={Dummy}/>  
-      </Stack.Navigator>
-      </View>
-    </NavigationContainer>
+    <View>
+      <Profile/>
+    </View>
+    
   );
 }
+
 
 
 const styles = StyleSheet.create({
